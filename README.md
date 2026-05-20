@@ -1,7 +1,7 @@
-# 🎨 ERC UI Library
+# ERC UI Library
 
-> A powerful, lightweight, and easy-to-use UI library for Roblox scripting
-> 
+**ERC UI Library** is a powerful, lightweight, and easy-to-use UI library for Roblox scripting.
+
 > Inspired by **WindUI** — designed to be fast, responsive, and production-ready
 
 ![Version](https://img.shields.io/badge/version-0.0.1.1-blue)
@@ -11,33 +11,27 @@
 
 ---
 
-## 📖 Table of Contents
+## » Table of Contents
 
-1. [Overview](#-overview)
-2. [Features](#-features)
-3. [Installation](#-installation)
-4. [Quick Start](#-quick-start)
-5. [Architecture](#-architecture)
-6. [API Reference](#-api-reference)
-   - [Main Window](#1-main-window)
-   - [Tabs](#2-tabs-and-navigation)
-   - [Components](#3-components)
-   - [Component API Methods](#component-api-methods---return-values)
-   - [Notifications](#4-notifications)
-7. [Complete Examples](#-complete-examples)
-8. [Advanced Usage](#-advanced-usage)
-9. [Performance Tips](#-performance-tips)
-10. [License](#-license)
-11. [Contributing](#-contributing)
-12. [Support](#-support)
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Quick Start](#quick-start)
+5. [Architecture](#architecture)
+6. [API Reference](#api-reference)
+7. [Component API Methods](#component-api-methods---return-values)
+8. [Complete Examples](#complete-examples-with-return-values)
+9. [Advanced Usage](#advanced-usage)
+10. [Performance Tips](#performance-tips)
+11. [License](#license)
 
 ---
 
-## 🎯 Overview
+## ▸ Overview
 
 **ERC UI Library** is a comprehensive Roblox UI framework designed to simplify the creation of professional-looking user interfaces. It provides ready-to-use components, automatic layout management, and smooth animations without requiring complex setup.
 
-### Why ERC UI?
+### ► Why ERC UI?
 
 - **Zero Boilerplate** — Create a complete UI with just a few lines of code
 - **Developer Friendly** — Intuitive API that follows common UI patterns
@@ -48,57 +42,57 @@
 
 ---
 
-## ✨ Features
+## ▸ Features
 
-### Core Features
-- ✅ **Multi-tab Interface System** — Organize features across multiple tabs
-- ✅ **8 UI Components** — Toggle, Button, TextBox, Label, Slider, Dropdown, ColorPicker, Section
-- ✅ **Notification System** — Toast-style notifications with auto-dismiss
-- ✅ **Window Management** — Draggable, minimizable, fullscreen, closable
-- ✅ **Smooth Animations** — Tweening animations for all interactions
-- ✅ **Responsive Design** — Automatically adjusts to viewport changes
+### ► Core Features
+- [✓] **Multi-tab Interface System** — Organize features across multiple tabs
+- [✓] **8 UI Components** — Toggle, Button, TextBox, Label, Slider, Dropdown, ColorPicker, Section
+- [✓] **Notification System** — Toast-style notifications with auto-dismiss
+- [✓] **Window Management** — Draggable, minimizable, fullscreen, closable
+- [✓] **Smooth Animations** — Tweening animations for all interactions
+- [✓] **Responsive Design** — Automatically adjusts to viewport changes
 
-### Advanced Features
-- ✅ **Single & Multi-select Dropdowns** — Flexible selection modes
-- ✅ **HSV Color Picker** — Professional color selection with real-time preview
-- ✅ **Integer & Decimal Sliders** — Support for both data types
-- ✅ **Search-enabled Dropdowns** — Filter options in real-time
-- ✅ **Custom Callbacks** — React to user interactions instantly
-- ✅ **Component API Returns** — Get/Set values on components programmatically
+### ► Advanced Features
+- [✓] **Single & Multi-select Dropdowns** — Flexible selection modes
+- [✓] **HSV Color Picker** — Professional color selection with real-time preview
+- [✓] **Integer & Decimal Sliders** — Support for both data types
+- [✓] **Search-enabled Dropdowns** — Filter options in real-time
+- [✓] **Custom Callbacks** — React to user interactions instantly
+- [✓] **Component API Returns** — Get/Set values on components programmatically
 
-### Performance
-- ✅ **Lightweight** — Minimal memory footprint
-- ✅ **Efficient Rendering** — Smart reuse of UI elements
-- ✅ **Connection Cleanup** — Automatic disconnection of event listeners
-- ✅ **Optimized Tweening** — Cancellation of unused animations
+### ► Performance
+- [✓] **Lightweight** — Minimal memory footprint
+- [✓] **Efficient Rendering** — Smart reuse of UI elements
+- [✓] **Connection Cleanup** — Automatic disconnection of event listeners
+- [✓] **Optimized Tweening** — Cancellation of unused animations
 
 ---
 
-## 📦 Installation
+## ▸ Installation
 
-### Method 1: Direct Load (Online)
+### ► Method 1: Direct Load (Online)
 ```lua
 local erclib = loadstring(game:HttpGet("https://raw.githubusercontent.com/John-loercol/erc-library-ui/main/source-main/global-erc-uilib-0.0.1.1.lua"))()
 ```
 
-### Method 2: Local File Load
+### ► Method 2: Local File Load
 ```lua
 local erclib = loadstring(readfile("source-main/global-erc-uilib-0.0.1.1.lua"))()
 ```
 
-### Method 3: Module Script
+### ► Method 3: Module Script
 ```lua
 local erclib = require(script.Parent:WaitForChild("global-erc-uilib-0.0.1.1"))
 ```
 
-### Requirements
+### ► Requirements
 - Roblox game running
 - Script execution enabled (LocalScript or via exploit)
 - Access to CoreGui service
 
 ---
 
-## 🚀 Quick Start
+## ▸ Quick Start
 
 Here's the simplest way to get started:
 
@@ -151,9 +145,9 @@ That's it! You now have a fully functional UI.
 
 ---
 
-## 🏗️ Architecture
+## ▸ Architecture
 
-### Component Hierarchy
+### ► Component Hierarchy
 
 ```
 ERC UI Library
@@ -197,7 +191,7 @@ ERC UI Library
 
 ---
 
-## 📚 API Reference
+## ▸ API Reference
 
 ### 1. Main Window
 
@@ -308,38 +302,16 @@ Creates an HSV-based color picker.
 
 ---
 
-## Component API Methods - Return Values
+## ▸ Component API Methods - Return Values
 
-Each component returns an API object that allows you to interact with it programmatically. Here are the complete available methods:
+Each component returns an API object that allows you to interact with it programmatically.
 
-### **Toggle API** ✅
+### ■ Toggle API
 
-Store the returned object to control the toggle:
-
+**Methods:**
 ```lua
-local Toggle = Tab:createToggle({
-    Name = "Auto Farm",
-    default = false,
-    callback = function(state)
-        print("Toggle changed:", state)
-    end
-})
-```
-
-**Available Methods:**
-
-```lua
--- Set the toggle state (true = enabled, false = disabled)
-Toggle:SetState(true)
-Toggle:SetState(false)
-
--- Get the current state
-local currentState = Toggle:GetState()
-if currentState then
-    print("Toggle is ON")
-else
-    print("Toggle is OFF")
-end
+:SetState(bool)     -- Enable/disable toggle
+:GetState()         -- Get current state (returns boolean)
 ```
 
 **Full Example:**
@@ -348,448 +320,296 @@ local autoFarmToggle = MainTab:createToggle({
     Name = "Auto Farm",
     default = false,
     callback = function(state)
-        if state then
-            print("Auto farming started!")
-        else
-            print("Auto farming stopped!")
-        end
+        print("Auto farming:", state and "enabled" or "disabled")
     end
 })
 
--- Enable it after 2 seconds
-task.wait(2)
+-- Programmatically enable
 autoFarmToggle:SetState(true)
 
--- Check status later
-task.wait(5)
+-- Check current state
 if autoFarmToggle:GetState() then
-    print("Farm is still running")
+    print("Auto farm is active")
 end
 ```
 
 ---
 
-### **TextBox API** ✅
+### ■ TextBox API
 
-Store the returned object to control text input:
-
+**Methods:**
 ```lua
-local TextInput = Tab:createToggleText({
-    Name = "Username",
-    PlaceholderText = "Enter username"
-})
-```
-
-**Available Methods:**
-
-```lua
--- Set the text value
-TextInput:SetText("John123")
-
--- Get the current text
-local username = TextInput:GetText()
-print("Username entered:", username)
-
--- Clear all text
-TextInput:ClearText()
+:SetText(string)    -- Set input value
+:GetText()          -- Get current text (returns string)
+:ClearText()        -- Clear all text
 ```
 
 **Full Example:**
 ```lua
-local playerNameInput = MainTab:createToggleText({
-    Name = "Target Player",
-    PlaceholderText = "Enter player name"
+local playerInput = MainTab:createToggleText({
+    Name = "Player Name",
+    PlaceholderText = "Enter name"
 })
 
+playerInput:SetText("John123")
+
 MainTab:createToggleButton({
-    Name = "Search",
+    Name = "Submit",
     callback = function()
-        local targetName = playerNameInput:GetText()
-        
-        if targetName == "" then
-            playerNameInput:SetText("ERROR: Name is required!")
-            task.wait(1.5)
-            playerNameInput:ClearText()
-            return
-        end
-        
-        print("Searching for:", targetName)
+        local name = playerInput:GetText()
+        print("Player:", name)
+        playerInput:ClearText()
     end
 })
 ```
 
 ---
 
-### **Text Label API** ✅
+### ■ Text Label API
 
-Store the returned object to display dynamic text:
-
+**Methods:**
 ```lua
-local StatusLabel = Tab:createToggleTextLabel({
+:SetText(string)    -- Update display text
+:GetText()          -- Get current text (returns string)
+:ClearText()        -- Clear text
+```
+
+**Full Example:**
+```lua
+local statusLabel = MainTab:createToggleTextLabel({
     Name = "Status",
     Text = "Initializing..."
 })
-```
 
-**Available Methods:**
-
-```lua
--- Update the label text
-StatusLabel:SetText("Connected")
-
--- Get the current text
-local currentStatus = StatusLabel:GetText()
-print("Status:", currentStatus)
-
--- Clear the text
-StatusLabel:ClearText()
-```
-
-**Full Example:**
-```lua
-local connectionStatus = MainTab:createToggleTextLabel({
-    Name = "Connection",
-    Text = "Connecting..."
-})
-
--- Simulate connection steps
-connectionStatus:SetText("⏳ Connecting...")
-task.wait(1)
-
-connectionStatus:SetText("🔐 Authenticating...")
-task.wait(1)
-
-connectionStatus:SetText("✓ Connected")
+statusLabel:SetText("Ready")
+print("Current status:", statusLabel:GetText())
 ```
 
 ---
 
-### **Slider API** ✅
+### ■ Slider API
 
-Store the returned object to control numeric values:
-
+**Methods:**
 ```lua
-local SpeedSlider = Tab:createToggleSlider({
-    Name = "Walk Speed",
+:SetValue(number)   -- Set slider position
+:GetValue()         -- Get current value (returns number)
+```
+
+**Full Example:**
+```lua
+local speedSlider = MainTab:createToggleSlider({
+    Name = "Speed",
     mode = "int",
-    minValue = 16,
-    maxValue = 200,
-    default = 16,
-    callback = function(value)
-        print("Speed changed to:", value)
-    end
-})
-```
-
-**Available Methods:**
-
-```lua
--- Set the slider to a specific value
-SpeedSlider:SetValue(100)
-
--- Get the current value
-local currentSpeed = SpeedSlider:GetValue()
-print("Current speed:", currentSpeed)
-```
-
-**Full Example:**
-```lua
-local gravitySlider = MainTab:createToggleSlider({
-    Name = "Gravity",
-    mode = "decimal",
-    minValue = 0,
+    minValue = 1,
     maxValue = 100,
-    default = workspace.Gravity,
-    callback = function(value)
-        workspace.Gravity = value
-    end
+    default = 50
 })
 
-MainTab:createToggleButton({
-    Name = "Zero Gravity",
-    callback = function()
-        gravitySlider:SetValue(0)
-    end
-})
-
-MainTab:createToggleButton({
-    Name = "Normal Gravity",
-    callback = function()
-        gravitySlider:SetValue(workspace.Gravity)
-    end
-})
+speedSlider:SetValue(75)
+local currentSpeed = speedSlider:GetValue()
+print("Speed:", currentSpeed)
 ```
 
 ---
 
-### **Dropdown API** ✅
+### ■ Dropdown API
 
-Store the returned object to manage selections:
-
+**Methods:**
 ```lua
-local TeamDropdown = Tab:createToggleDropdown({
-    Name = "Choose Team",
-    mode = "Single",
-    DefaultText = "Pick a team..."
-})
+:Add(string)                -- Add single option
+:AddList(table)             -- Add multiple options
+:Get()                      -- Get selection(s)
+:Set(value)                 -- Set selection (single mode)
+:SetMultiple(table)         -- Set multiple selections (multi mode)
+:Clear()                    -- Remove all options
+:ClearSelection()           -- Deselect all items
+:RefreshButtonStates()      -- Refresh visual state
 ```
 
-**Available Methods:**
-
+**Single-Select Example:**
 ```lua
--- Add a single option
-Dropdown:Add("Red Team")
-
--- Add multiple options (clears previous)
-Dropdown:AddList({"Red Team", "Blue Team", "Green Team"})
-
--- Get selected value(s)
-local selected = Dropdown:Get()
-print("Selected:", selected)
-
--- Set selection (single mode)
-Dropdown:Set("Blue Team")
-
--- Set multiple selections (multi mode only)
-Dropdown:SetMultiple({"Red Team", "Green Team"})
-
--- Clear all options from dropdown
-Dropdown:Clear()
-
--- Deselect all (keeps options visible)
-Dropdown:ClearSelection()
-
--- Refresh visual state
-Dropdown:RefreshButtonStates()
-```
-
-**Example - Single Select:**
-```lua
-local gamemodeDropdown = MainTab:createToggleDropdown({
+local gameDropdown = MainTab:createToggleDropdown({
     Name = "Gamemode",
     mode = "Single",
-    DefaultText = "Select gamemode..."
+    DefaultText = "Pick mode..."
 })
 
-gamemodeDropdown:AddList({"Survival", "Creative", "Adventure"})
+gameDropdown:AddList({"Survival", "Creative", "Adventure"})
 
 MainTab:createToggleButton({
-    Name = "Load Gamemode",
+    Name = "Load",
     callback = function()
-        local selected = gamemodeDropdown:Get()
-        if selected then
-            print("Loading:", selected)
-        end
+        local selected = gameDropdown:Get()
+        print("Loading:", selected)
     end
 })
 ```
 
-**Example - Multi-Select:**
+**Multi-Select Example:**
 ```lua
-local espFilterDropdown = MainTab:createToggleDropdown({
-    Name = "ESP Filters",
+local filterDropdown = MainTab:createToggleDropdown({
+    Name = "Filters",
     mode = "Multi",
     DefaultText = "Select filters..."
 })
 
-espFilterDropdown:AddList({"Players", "NPCs", "Enemies", "Items"})
+filterDropdown:AddList({"Players", "NPCs", "Items", "Enemies"})
 
 MainTab:createToggleButton({
-    Name = "Apply Filters",
+    Name = "Apply",
     callback = function()
-        local selected = espFilterDropdown:Get()
-        print("Active filters:", table.concat(selected, ", "))
+        local selected = filterDropdown:Get()
+        for _, filter in ipairs(selected) do
+            print("Active filter:", filter)
+        end
     end
 })
 ```
 
 ---
 
-### **Color Picker API** ✅
+### ■ Color Picker API
 
-Store the returned object to handle colors:
-
+**Methods:**
 ```lua
-local ColorPicker = Tab:createToggleColorPicker({
-    Name = "ESP Color",
-    defaultColor = Color3.fromRGB(0, 170, 255)
-})
-```
-
-**Available Methods:**
-
-```lua
--- Get the selected color (returns R, G, B, Alpha, Color3)
-local r, g, b, alpha, color3 = ColorPicker:GetColor()
-print(string.format("RGB(%d, %d, %d)", r, g, b))
-
--- Set the color and alpha
-local newColor = Color3.fromRGB(255, 100, 50)
-ColorPicker:SetColor(newColor, 0.8)
+:GetColor()                 -- Get color (returns r, g, b, alpha, Color3)
+:SetColor(Color3, alpha)    -- Set color and transparency
 ```
 
 **Full Example:**
 ```lua
-local espColorPicker = MainTab:createToggleColorPicker({
+local colorPicker = MainTab:createToggleColorPicker({
     Name = "ESP Color",
     defaultColor = Color3.fromRGB(0, 255, 0)
 })
 
 MainTab:createToggleButton({
-    Name = "Apply Color",
+    Name = "Apply",
     callback = function()
-        local r, g, b, alpha, color3 = espColorPicker:GetColor()
-        print(string.format("Applying color RGB(%d, %d, %d)", r, g, b))
-        
-        -- Apply to all ESP objects
-        for _, obj in pairs(workspace:GetDescendants()) do
-            if obj:IsA("Frame") and obj.Name == "ESP" then
-                obj.BackgroundColor3 = color3
-            end
-        end
+        local r, g, b, alpha, color3 = colorPicker:GetColor()
+        print(string.format("Color: RGB(%d,%d,%d) Alpha:%.2f", r, g, b, alpha))
     end
 })
 
 MainTab:createToggleButton({
-    Name = "Reset to Red",
+    Name = "Reset",
     callback = function()
-        espColorPicker:SetColor(Color3.fromRGB(255, 0, 0), 1)
+        colorPicker:SetColor(Color3.fromRGB(255, 0, 0), 1)
     end
 })
 ```
 
 ---
 
-### 4. Notifications
+## ▸ Complete Examples with Return Values
 
-#### `erclib:Notification(config)`
-
-Displays a toast-style notification.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `Title` | string | `"ERC SYSTEM"` | Notification title |
-| `Description` | string | `"..."` | Notification message |
-| `Time` | number | `1` | Display duration (seconds) |
-
----
-
-## 📋 Complete Examples with Return Values
-
-### Example 1: Simple Data Collection
+### ► Example 1: Form with Validation
 
 ```lua
 local erclib = loadstring(game:HttpGet("..."))()
 
 local Window = erclib:window({
-    TitleText = "Data Collector",
-    SubTitle = "v1.0"
+    TitleText = "Registration",
+    SubTitle = "User Data Form"
 })
 
-local DataTab = Window:CreateTab({ Name = "Data" })
+local FormTab = Window:CreateTab({ Name = "Register" })
 
--- Store component references
-local usernameInput = DataTab:createToggleText({
-    Name = "Username",
-    PlaceholderText = "Enter username"
+-- Store references
+local nameInput = FormTab:createToggleText({
+    Name = "Full Name",
+    PlaceholderText = "John Doe"
 })
 
-local ageSlider = DataTab:createToggleSlider({
+local emailInput = FormTab:createToggleText({
+    Name = "Email",
+    PlaceholderText = "user@example.com"
+})
+
+local ageSlider = FormTab:createToggleSlider({
     Name = "Age",
     mode = "int",
-    minValue = 13,
+    minValue = 18,
     maxValue = 100,
-    default = 18
+    default = 25
 })
 
-local countryDropdown = DataTab:createToggleDropdown({
-    Name = "Country",
-    mode = "Single"
-})
-countryDropdown:AddList({"USA", "UK", "Canada", "Australia"})
-
--- Status display
-local statusLabel = DataTab:createToggleTextLabel({
+local statusLabel = FormTab:createToggleTextLabel({
     Name = "Status",
-    Text = "Ready"
+    Text = "Ready to register"
 })
 
--- Submit button that retrieves all values
-DataTab:createToggleButton({
-    Name = "Submit",
+-- Submit handler
+FormTab:createToggleButton({
+    Name = "Register",
     callback = function()
-        statusLabel:SetText("Processing...")
-        
-        local username = usernameInput:GetText()
+        local name = nameInput:GetText()
+        local email = emailInput:GetText()
         local age = ageSlider:GetValue()
-        local country = countryDropdown:Get()
         
-        if username == "" or country == nil then
-            statusLabel:SetText("❌ Error: Fill all fields")
+        if name == "" or email == "" then
+            statusLabel:SetText("[ERROR] Please fill all fields")
             return
         end
         
-        task.wait(0.5)
-        statusLabel:SetText("✓ Submitted!")
+        statusLabel:SetText("[SUCCESS] Account created!")
         
         erclib:Notification({
-            Title = "Success",
-            Description = username .. " from " .. country,
-            Time = 2
+            Title = "Welcome",
+            Description = "Registered: " .. name,
+            Time = 3
         })
     end
 })
 ```
 
-### Example 2: Control Panel with Multiple Tabs
+### ► Example 2: Multi-Tab Dashboard
 
 ```lua
 local erclib = loadstring(game:HttpGet("..."))()
 
 local Window = erclib:window({
-    TitleText = "Control Panel",
+    TitleText = "Dashboard",
     Size = UDim2.new(0, 600, 0, 500)
 })
 
-local SettingsTab = Window:CreateTab({ Name = "Settings" })
-local StatusTab = Window:CreateTab({ Name = "Status" })
+local ConfigTab = Window:CreateTab({ Name = "Settings" })
+local StatsTab = Window:CreateTab({ Name = "Stats" })
 
 -- Settings components
-local configNameInput = SettingsTab:createToggleText({
+local configInput = ConfigTab:createToggleText({
     Name = "Config Name",
-    PlaceholderText = "e.g., MyConfig"
+    PlaceholderText = "MyConfig"
 })
 
-local featureToggle = SettingsTab:createToggle({
-    Name = "Enable Feature",
-    default = true
+local autoStartToggle = ConfigTab:createToggle({
+    Name = "Auto Start",
+    default = false
 })
 
-local qualitySlider = SettingsTab:createToggleSlider({
-    Name = "Quality Level",
+local qualitySlider = ConfigTab:createToggleSlider({
+    Name = "Quality",
     mode = "int",
     minValue = 1,
     maxValue = 10,
     default = 5
 })
 
--- Status display (on different tab)
-local statusLabel = StatusTab:createToggleTextLabel({
-    Name = "Current Config",
+-- Stats display (different tab)
+local statsLabel = StatsTab:createToggleTextLabel({
+    Name = "Current Settings",
     Text = "No config loaded"
 })
 
--- Apply button to save all settings
-SettingsTab:createToggleButton({
-    Name = "Save Config",
+-- Save button (updates stats in other tab)
+ConfigTab:createToggleButton({
+    Name = "Save",
     callback = function()
-        local configName = configNameInput:GetText()
-        local isEnabled = featureToggle:GetState()
+        local name = configInput:GetText()
+        local autoStart = autoStartToggle:GetState()
         local quality = qualitySlider:GetValue()
         
-        if configName == "" then
+        if name == "" then
             erclib:Notification({
                 Title = "Error",
                 Description = "Config name required",
@@ -798,173 +618,102 @@ SettingsTab:createToggleButton({
             return
         end
         
-        statusLabel:SetText(
-            "Config: " .. configName .. "\n" ..
-            "Enabled: " .. (isEnabled and "Yes" or "No") .. "\n" ..
-            "Quality: " .. quality
+        -- Update stats tab
+        statsLabel:SetText(
+            "Config: " .. name .. "\n" ..
+            "Auto Start: " .. (autoStart and "YES" or "NO") .. "\n" ..
+            "Quality: " .. quality .. "/10"
         )
         
         erclib:Notification({
             Title = "Saved",
-            Description = "Config '" .. configName .. "' saved",
+            Description = "Config '" .. name .. "' saved",
             Time = 2
         })
     end
 })
 ```
 
-### Example 3: Real-Time Settings Monitor
-
-```lua
-local erclib = loadstring(game:HttpGet("..."))()
-
-local Window = erclib:window({
-    TitleText = "Settings Monitor"
-})
-
-local MainTab = Window:CreateTab({ Name = "Settings" })
-
--- Input components
-local playerNameInput = MainTab:createToggleText({
-    Name = "Player Name",
-    PlaceholderText = "Your name"
-})
-
-local speedToggle = MainTab:createToggle({
-    Name = "Speed Hack",
-    default = false
-})
-
-local speedSlider = MainTab:createToggleSlider({
-    Name = "Speed Value",
-    mode = "decimal",
-    minValue = 1,
-    maxValue = 3,
-    default = 1
-})
-
-local themeDropdown = MainTab:createToggleDropdown({
-    Name = "Theme",
-    mode = "Single"
-})
-themeDropdown:AddList({"Dark", "Light", "Custom"})
-
--- Display all current values
-local allSettingsLabel = MainTab:createToggleTextLabel({
-    Name = "All Settings",
-    Text = "[Click Refresh to update]"
-})
-
--- Refresh button to show all values
-MainTab:createToggleButton({
-    Name = "Refresh Settings",
-    callback = function()
-        local name = playerNameInput:GetText()
-        local speedEnabled = speedToggle:GetState()
-        local speedValue = speedSlider:GetValue()
-        local theme = themeDropdown:Get()
-        
-        allSettingsLabel:SetText(
-            "Name: " .. (name == "" and "[Not set]" or name) .. "\n" ..
-            "Speed Hack: " .. (speedEnabled and "ON" or "OFF") .. "\n" ..
-            "Speed Value: " .. string.format("%.2f", speedValue) .. "x\n" ..
-            "Theme: " .. (theme or "[Not selected]")
-        )
-    end
-})
-```
-
 ---
 
-## 🔧 Advanced Usage
+## ▸ Advanced Usage
 
-### Chaining Component Operations
+### ► Chaining Operations
 
 ```lua
--- Create components and immediately use their APIs
-local input = Tab:createToggleText({ Name = "Input" })
-input:SetText("Default Value")
+local myToggle = Tab:createToggle({ Name = "Feature" })
+myToggle:SetState(true)
 
-local slider = Tab:createToggleSlider({
-    Name = "Value",
-    minValue = 0,
-    maxValue = 100,
-    default = 50
-})
-slider:SetValue(75)
+local mySlider = Tab:createToggleSlider({ Name = "Value", minValue = 0, maxValue = 100 })
+mySlider:SetValue(50)
 
-local label = Tab:createToggleTextLabel({
-    Name = "Display",
-    Text = "Ready"
-})
-label:SetText("Updated!")
+if myToggle:GetState() then
+    print("Value is:", mySlider:GetValue())
+end
 ```
 
-### Dynamic Updates Based on User Input
+### ► Dynamic Dropdown Updates
 
 ```lua
 local dropdown = Tab:createToggleDropdown({
-    Name = "Select Option",
+    Name = "Server List",
     mode = "Single"
 })
-dropdown:AddList({"Option A", "Option B", "Option C"})
 
--- Later, update the dropdown based on game state
-task.wait(5)
+dropdown:AddList({"Loading..."})
+
+-- Update after fetch
+task.wait(2)
 dropdown:Clear()
-dropdown:AddList({"New Option 1", "New Option 2"})
+dropdown:AddList({"Server 1", "Server 2", "Server 3"})
 ```
 
-### Syncing Components Across Tabs
+### ► Cross-Tab Synchronization
 
 ```lua
--- Tab 1: Input
 local InputTab = Window:CreateTab({ Name = "Input" })
-local textInput = InputTab:createToggleText({ Name = "Enter Text" })
+local OutputTab = Window:CreateTab({ Name = "Output" })
 
--- Tab 2: Display (different tab)
-local DisplayTab = Window:CreateTab({ Name = "Display" })
-local textDisplay = DisplayTab:createToggleTextLabel({ Name = "Text Output", Text = "..." })
+local input = InputTab:createToggleText({ Name = "Enter text" })
+local output = OutputTab:createToggleTextLabel({ Name = "Output", Text = "..." })
 
--- Sync button
 InputTab:createToggleButton({
-    Name = "Sync to Display",
+    Name = "Sync",
     callback = function()
-        local inputValue = textInput:GetText()
-        textDisplay:SetText(inputValue)
+        output:SetText(input:GetText())
     end
 })
 ```
 
 ---
 
-## ⚡ Performance Tips
+## ▸ Performance Tips
 
-### Batch Component Creation
+### ► Store Component References
+
 ```lua
--- ✅ Better: Store all component references
+-- [✓] GOOD: Store and reuse
 local components = {
     toggle = Tab:createToggle({ ... }),
     slider = Tab:createToggleSlider({ ... }),
-    text = Tab:createToggleText({ ... }),
+    input = Tab:createToggleText({ ... })
 }
 
--- Access them anytime without re-creating
-if components.toggle:GetState() then
-    print(components.slider:GetValue())
-end
+-- Use multiple times
+components.toggle:SetState(true)
+local val = components.slider:GetValue()
 ```
 
-### Efficient State Management
+### ► Avoid Recreating Components
+
 ```lua
--- ❌ Inefficient: Creating new components repeatedly
+-- [✗] BAD: Creates 100 toggles
 for i = 1, 100 do
-    Tab:createToggle({ ... })
+    Tab:createToggle({ Name = "Toggle " .. i })
 end
 
--- ✅ Better: Create once, update as needed
-local toggle = Tab:createToggle({ ... })
--- Reuse the same toggle, just update its state
+-- [✓] GOOD: Create once, reuse
+local toggle = Tab:createToggle({ Name = "Toggle" })
 for i = 1, 100 do
     toggle:SetState(i % 2 == 0)
     task.wait(0.1)
@@ -973,18 +722,18 @@ end
 
 ---
 
-## 📄 License
+## ▸ License
 
 GNU Affero General Public License v3.0 (AGPL-3.0)
 
-**Full License:** [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html)
+**Full License:** [Read here](https://www.gnu.org/licenses/agpl-3.0.html)
 
 ---
 
 <div align="center">
 
-**[⬆ Back to Top](#-erc-ui-library)**
+[↑ Back to Top](#erc-ui-library)
 
-Made with ❤️ by the ERC Community
+Made with ♡ by the ERC Community
 
 </div>
