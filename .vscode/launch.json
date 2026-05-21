@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+    
+        {
+            "type": "luau",
+            "request": "launch",
+            "name": "launch luau debugger",
+            "program": "${workspaceFolder}/tests/test_ercui.lua",
+            "port": 58000
+        },
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "type": "lua",
+            "request": "launch",
+            "name": "Ask for file name",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/${command:AskForProgramName}",
+            "luaExecutable": "lua",
+            "stopOnEntry": true
+        }
+    ]
+}
